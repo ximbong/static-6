@@ -58,11 +58,11 @@ section:first-of-type {
 }
 
 .intro .paging {
-  display:flex;
+  display: flex;
   flex-direction: column;
-  position:absolute;
-  top:calc( 50% - 48px);
-  right:15px;
+  position: absolute;
+  top: calc( 50% - 48px);
+  right: 15px;
 }
 
 .intro>div:not(.title) {
@@ -381,10 +381,116 @@ section:not(:first-of-type) {
   border: 1px solid black;
   background: white;
   margin: 10px;
-  transform:rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .diamond:first-child {
-  background:white;
-  border:none;
+  background: white;
+  border: none;
+}
+
+@media (max-width:900px) {
+  nav {
+    padding: 20px 5%;
+  }
+  section {
+    padding: 0 5%;
+  }
+  .overlay {
+    left: 5%;
+    right: 5%;
+  }
+  #clientSays .images img {
+    max-width: 150px;
+    max-height: 60px;
+  }
+}
+
+@media (max-width:755px) {
+  nav ul li {
+    margin-left: 5px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width:650px) {
+  section .part {
+    grid-template-columns: 1fr;
+  }
+  section .res-change {
+    grid-template-areas: "picture""text";
+  }
+  section .res-change .partLeft {
+    grid-area: text;
+  }
+  .text {
+    padding-right: 0px;
+  }
+  .partRight>.text {
+    padding-left: 0px;
+  }
+  #contactSection .contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 60px;
+  }
+  #clientSays .images img {
+    max-width: 100px;
+    max-height: 50px;
+  }
+}
+
+@media (max-width:600px) {
+  nav {
+    padding: 20px 30px;
+  }
+  section {
+    padding: 0 15px;
+  }
+  .overlay {
+    left: 15px;
+    right: 15px;
+  }
+  nav {
+    font-size: 85%;
+  }
+  .contentDetails .title, .partCol .title {
+    font-size: 150%;
+  }
+}
+
+@media (max-width:540px) {
+  body{
+    font-size:90%;
+  }
+  nav ul{
+    display:none;
+  }
+  #bestWork {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    margin-bottom: 20px;
+}
+
+.contentDetails {
+  flex-direction: column;
+}
+
+.contentDetails>div {
+  margin-bottom:5px;
+}
+}
+
+@media (max-width:450px){
+  #clientSays .images {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#clientSays .images img {
+    max-width: 250px;
+    max-height: 150px;
+}
 }
